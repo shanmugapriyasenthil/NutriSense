@@ -1,10 +1,9 @@
-<?php
-// Database connection
-
-$host = "localhost";
-$username = "root";
-$password = "S_priya123";
-$database = "nutrisense";
+ <?php
+// Database connection using Environment Variables
+$host = getenv('DB_HOST');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+$database = getenv('DB_NAME');
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $database);
